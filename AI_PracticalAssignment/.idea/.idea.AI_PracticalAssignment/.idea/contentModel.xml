@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Crynano\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Crynano\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_AI_PracticalAssignment.-996038377.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Crynano\Documents\GitHub\IA_PracticalAssignment-1\AI_PracticalAssignment" t="IncludeRecursive">
+      <e p="AI_PracticalAssignment.sln" t="IncludeFlat" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="lib" t="Include">
+          <e p="OtherScripts" t="Include">
+            <e p="ControlScript.cs" t="Include" />
+            <e p="DebugExtension.cs" t="Include" />
+            <e p="DieNear.cs" t="Include" />
+            <e p="KBDMove.cs" t="Include" />
+            <e p="KBDRotate.cs" t="Include" />
+            <e p="SensingUtils.cs" t="Include" />
+            <e p="StartStopController.cs" t="Include" />
+            <e p="TimeToLive.cs" t="Include" />
+          </e>
+          <e p="Steerings" t="Include">
+            <e p="Align.cs" t="Include" />
+            <e p="Arrive.cs" t="Include" />
+            <e p="Cohesion.cs" t="Include" />
+            <e p="Combined" t="Include">
+              <e p="ArrivePlusAvoid.cs" t="Include" />
+              <e p="FAKP.cs" t="Include" />
+              <e p="FleePlusAvoid.cs" t="Include" />
+              <e p="Flocking.cs" t="Include" />
+              <e p="FlockingAround.cs" t="Include" />
+              <e p="FlockingAroundPlusAvoid.cs" t="Include" />
+              <e p="FlockingPlusAvoid.cs" t="Include" />
+              <e p="FlockingPlusFlee.cs" t="Include" />
+              <e p="FlockPlusKP.cs" t="Include" />
+              <e p="LeaderFollowingBlended.cs" t="Include" />
+              <e p="WanderAround.cs" t="Include" />
+              <e p="WanderAroundPlusAvoid.cs" t="Include" />
+              <e p="WanderPlusAvoid.cs" t="Include" />
+            </e>
+            <e p="CombineSteerings.cs" t="Include" />
+            <e p="Evade.cs" t="Include" />
+            <e p="Face.cs" t="Include" />
+            <e p="Flee.cs" t="Include" />
+            <e p="GoWhereYouLook.cs" t="Include" />
+            <e p="KBDSteer01.cs" t="Include" />
+            <e p="KBDSteer02.cs" t="Include" />
+            <e p="KeepPosition.cs" t="Include" />
+            <e p="KinematicState.cs" t="Include" />
+            <e p="LinearRepulsion.cs" t="Include" />
+            <e p="NaiveWander.cs" t="Include" />
+            <e p="ObstacleAvoidance.cs" t="Include" />
+            <e p="Pursue.cs" t="Include" />
+            <e p="Seek.cs" t="Include" />
+            <e p="Spiral.cs" t="Include" />
+            <e p="SteeringBehaviour.cs" t="Include" />
+            <e p="SteeringOutput.cs" t="Include" />
+            <e p="Utils.cs" t="Include" />
+            <e p="VelocityMatching.cs" t="Include" />
+            <e p="VeryNaiveWander.cs" t="Include" />
+            <e p="Wander.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="src" t="Include">
+            <e p="HEN_Blackboard.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
