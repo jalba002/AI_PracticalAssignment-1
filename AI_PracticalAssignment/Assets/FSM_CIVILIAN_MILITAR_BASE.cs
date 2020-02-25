@@ -75,6 +75,7 @@ namespace FSM
                 case State.GOING_BASE:
                     if (SensingUtils.DistanceToTarget(gameObject, blackboard.militarBase) < blackboard.nearbyMilitarBaseRadius)
                     {
+                        GameController.Instance.civilianGlobalBB.MaxCiviliansFollowing--;
                         Destroy(gameObject);
                         break;
                     }
