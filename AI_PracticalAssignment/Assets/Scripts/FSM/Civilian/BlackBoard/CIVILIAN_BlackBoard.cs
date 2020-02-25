@@ -11,6 +11,8 @@ public class CIVILIAN_BlackBoard : MonoBehaviour
     [Header("Civilian Following FSM parameters")]
     public float PlayerDetectionRadius = 5.0f;
     public float farAwayPlayerRadius = 7.5f;
+    public string originalTag = "Civilian";
+    public string transportingTag = "TransportingCivilian";
 
     [Header("Civilian Militar Base FSM parameters")]
     public float MilitarBaseDetectableRadius = 20.0f;

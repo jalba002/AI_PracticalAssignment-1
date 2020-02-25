@@ -70,12 +70,14 @@ namespace FSM
                         GameController.Instance.civilianGlobalBB.CivilianFollowingCounter < GameController.Instance.civilianGlobalBB.MaxCiviliansFollowing)
                     {
                         ChangeState(State.FOLLOWING);
+                        break;
                     }
                     break;
                 case State.FOLLOWING:
                     if (SensingUtils.DistanceToTarget(gameObject, GameController.Instance.playerController) > blackboard.farAwayPlayerRadius)
                     {
                         ChangeState(State.CAMPING);
+                        break;
                     }
                     break;
             }
@@ -93,6 +95,7 @@ namespace FSM
                     //gameObject.transform.localScale /= newLocalScale;
                     //ks.maxAcceleration /= 2;
                     //ks.maxSpeed /= 2;
+                    gameObject.tag = blackboard.originalTag;
                     leaderFollowing.enabled = false;
                     leaderFollowing.target = null;
                     GameController.Instance.civilianGlobalBB.CivilianFollowingCounter--;
@@ -109,6 +112,7 @@ namespace FSM
                     //gameObject.transform.localScale *= newLocalScale;
                     //ks.maxAcceleration *= 2;
                     //ks.maxSpeed *= 2;
+                    gameObject.tag = blackboard.transportingTag;
                     GameController.Instance.civilianGlobalBB.CivilianFollowingCounter++;
                     leaderFollowing.target = GameController.Instance.playerController;
                     leaderFollowing.enabled = true;
