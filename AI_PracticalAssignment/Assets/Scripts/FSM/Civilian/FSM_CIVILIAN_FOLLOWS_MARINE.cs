@@ -16,39 +16,33 @@ namespace FSM
 
         private FSM_CIVILIAN_CAMPING fsmCivilianCamping;
         private LeaderFollowingBlended leaderFollowing;
-        //private KinematicState ks;
+        private KinematicState ks;
 
         private CIVILIAN_BlackBoard blackboard;
         private GameObject player;
 
-        //private float newLocalScale = 1.2f;
-        //private float normalSpeed;
-        //private float normalAcc;
-        //private Vector3 normalLocalScale;
+        private float normalSpeed;
+        private float normalAcc;
 
         void Start()
         {
             fsmCivilianCamping = GetComponent<FSM_CIVILIAN_CAMPING>();
             leaderFollowing = GetComponent<LeaderFollowingBlended>();
-            //ks = GetComponent<KinematicState>();
             blackboard = GetComponent<CIVILIAN_BlackBoard>();
+            ks = GetComponent<KinematicState>();
 
             fsmCivilianCamping.enabled = false;
             leaderFollowing.enabled = false;
-
-            //normalSpeed = ks.maxSpeed;
-            //normalAcc = ks.maxAcceleration;
-            //normalLocalScale = gameObject.transform.localScale;
-
+            normalSpeed = ks.maxSpeed;
+            normalAcc = ks.maxAcceleration;
         }
 
         public override void Exit()
         {
             fsmCivilianCamping.Exit();
             leaderFollowing.enabled = false;
-            //ks.maxSpeed = normalSpeed;
-            //ks.maxAcceleration = normalAcc;
-            //gameObject.transform.localScale = normalLocalScale;
+            ks.maxSpeed = normalSpeed;
+            ks.maxAcceleration = normalAcc;
             base.Exit();
         }
 
@@ -92,10 +86,9 @@ namespace FSM
                     fsmCivilianCamping.Exit();
                     break;
                 case State.FOLLOWING:
-                    //gameObject.transform.localScale /= newLocalScale;
-                    //ks.maxAcceleration /= 2;
-                    //ks.maxSpeed /= 2;
-                    gameObject.tag = blackboard.originalTag;
+                    ks.maxAcceleration /= blackboard.fastVelocity;
+                    ks.maxSpeed /= blackboard.fastVelocity;
+                    blackboard.followingPlayer = false;
                     leaderFollowing.enabled = false;
                     leaderFollowing.target = null;
                     GameController.Instance.civilianGlobalBB.CivilianFollowingCounter--;
@@ -109,10 +102,9 @@ namespace FSM
                     fsmCivilianCamping.ReEnter();
                     break;
                 case State.FOLLOWING:
-                    //gameObject.transform.localScale *= newLocalScale;
-                    //ks.maxAcceleration *= 2;
-                    //ks.maxSpeed *= 2;
-                    gameObject.tag = blackboard.transportingTag;
+                    ks.maxAcceleration *= blackboard.fastVelocity;
+                    ks.maxSpeed *= blackboard.fastVelocity;
+                    blackboard.followingPlayer = true;
                     GameController.Instance.civilianGlobalBB.CivilianFollowingCounter++;
                     leaderFollowing.target = GameController.Instance.playerController;
                     leaderFollowing.enabled = true;

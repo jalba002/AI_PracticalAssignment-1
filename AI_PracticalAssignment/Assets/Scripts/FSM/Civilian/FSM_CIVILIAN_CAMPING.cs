@@ -18,7 +18,6 @@ namespace FSM
         private WanderAroundPlusAvoid wander;
         private CIVILIAN_BlackBoard blackboard;
 
-        private string zombieTag;
         private GameObject zombie;
         private GameObject otherZombie;
 
@@ -31,11 +30,6 @@ namespace FSM
             wander.enabled = false;
             flee.enabled = false;
             wander.attractor = blackboard.campFire;
-            zombieTag = "Zombie";
-
-            // the global blackboard is better created by an external agent
-            // or (if it has to be created here) must come from a class implementing the SINGLETON PATTERN
-
         }
 
         public override void Exit()
@@ -59,7 +53,7 @@ namespace FSM
                     ChangeState(State.WANDERING);
                     break;
                 case State.WANDERING:
-                    zombie = SensingUtils.FindInstanceWithinRadius(gameObject, zombieTag, blackboard.nearbyZombieRadius);
+                    zombie = SensingUtils.FindInstanceWithinRadius(gameObject, blackboard.zombieTag, blackboard.nearbyZombieRadius);
                     if (zombie != null)
                         ChangeState(State.FLEEING);
                     break;
@@ -67,7 +61,7 @@ namespace FSM
                 case State.FLEEING:
                     if (zombie != null)
                     {
-                        otherZombie = SensingUtils.FindInstanceWithinRadius(gameObject, zombieTag, blackboard.nearbyZombieRadius);
+                        otherZombie = SensingUtils.FindInstanceWithinRadius(gameObject, blackboard.zombieTag, blackboard.nearbyZombieRadius);
                         if (FindZombie(zombie, otherZombie))
                         {
                             zombie = null;
@@ -76,7 +70,7 @@ namespace FSM
                     }
                     else
                     {
-                        zombie = SensingUtils.FindInstanceWithinRadius(gameObject, zombieTag, blackboard.nearbyZombieRadius);
+                        zombie = SensingUtils.FindInstanceWithinRadius(gameObject, blackboard.zombieTag, blackboard.nearbyZombieRadius);
                         if (FindZombie(otherZombie, zombie))
                         {
                             otherZombie = null;
@@ -95,7 +89,7 @@ namespace FSM
 
         private void ChangeState(State newState)
         {
-            // EXIT STATE LOGIC. Depends on current state
+            // exit logic
             switch (currentState)
             {
                 case State.WANDERING:
@@ -107,7 +101,7 @@ namespace FSM
                     break;
             }
 
-            // ENTER STATE LOGIC. Depends on newState
+            // enter logic
             switch (newState)
             {
                 case State.WANDERING:

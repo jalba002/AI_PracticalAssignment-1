@@ -16,39 +16,24 @@ namespace FSM
 
         private FSM_CIVILIAN_FOLLOWS_MARINE fsmCivilianFollowsMarine;
         private Arrive arrive;
-        //private KinematicState ks;
 
         private CIVILIAN_BlackBoard blackboard;
         private GameObject player;
-
-        //private float newLocalScale = 1.2f;
-        //private float normalSpeed;
-        //private float normalAcc;
-        //private Vector3 normalLocalScale;
 
         void Start()
         {
             fsmCivilianFollowsMarine = GetComponent<FSM_CIVILIAN_FOLLOWS_MARINE>();
             arrive = GetComponent<Arrive>();
-            //ks = GetComponent<KinematicState>();
             blackboard = GetComponent<CIVILIAN_BlackBoard>();
 
             fsmCivilianFollowsMarine.enabled = false;
             arrive.enabled = false;
-
-            //normalSpeed = ks.maxSpeed;
-            //normalAcc = ks.maxAcceleration;
-            //normalLocalScale = gameObject.transform.localScale;
-
         }
 
         public override void Exit()
         {
             fsmCivilianFollowsMarine.Exit();
             arrive.enabled = false;
-            //ks.maxSpeed = normalSpeed;
-            //ks.maxAcceleration = normalAcc;
-            //gameObject.transform.localScale = normalLocalScale;
             base.Exit();
         }
 
@@ -75,9 +60,11 @@ namespace FSM
                 case State.GOING_BASE:
                     if (SensingUtils.DistanceToTarget(gameObject, blackboard.militarBase) < blackboard.nearbyMilitarBaseRadius)
                     {
-                        if (gameObject.tag == blackboard.transportingTag)
+                        if (blackboard.followingPlayer)
                             GameController.Instance.civilianGlobalBB.CivilianFollowingCounter--;
 
+                        var particle = Instantiate(GameController.Instance.civilianGlobalBB.civilianSaved, transform.position, transform.rotation);
+                        particle.Play();
                         Destroy(gameObject);
                         break;
                     }
@@ -96,9 +83,6 @@ namespace FSM
                 case State.GOING_BASE:
                     arrive.enabled = false;
                     arrive.target = null;
-                    //gameObject.transform.localScale /= newLocalScale;
-                    //ks.maxAcceleration /= 2;
-                    //ks.maxSpeed /= 2;
                     break;
             }
 
@@ -111,9 +95,6 @@ namespace FSM
                 case State.GOING_BASE:
                     arrive.target = blackboard.militarBase;
                     arrive.enabled = true;
-                    //gameObject.transform.localScale *= newLocalScale;
-                    //ks.maxAcceleration *= 2;
-                    //ks.maxSpeed *= 2;
                     break;
             }
             currentState = newState;

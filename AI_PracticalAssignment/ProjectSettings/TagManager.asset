@@ -11,6 +11,7 @@ TagManager:
   - Wall
   - Civilian
   - MilitarBase
+  - TransportingCivilian
   layers:
   - Default
   - TransparentFX

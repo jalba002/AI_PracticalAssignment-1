@@ -8,13 +8,6 @@ public class WeaponController : MonoBehaviour
     public int flares = 10;
     public Transform damagePoint;
 
-
-    void Start()
-    {
-
-    }
-
-
     void Update()
     {
         if (Input.GetButtonDown("Fire2") && flares > 0)
