@@ -104,13 +104,13 @@ namespace FSM
                 case State.WANDERING:
                     flockingAround.enabled = true;
                     flockingAround.wanderRate = blackboard.wanderWanderRate;
-                    flockingAround.attractor = blackboard.attractor;
+                    flockingAround.attractor = blackboard.defaultAttractor;
                     flockingAround.seekWeight = blackboard.seekWeight;
                     break;
                 case State.BLOCKING:
                     flockingAround.enabled = true;
                     flockingAround.wanderRate = blackboard.blockingWanderRate;
-                    flockingAround.attractor = blackboard.attractor;
+                    flockingAround.attractor = blackboard.blockingAttractor;
                     flockingAround.seekWeight = blackboard.blockingSeekWeight;
                     break;
                 default:
