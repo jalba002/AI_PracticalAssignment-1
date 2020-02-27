@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using FSM;
 using Steerings;
 using System.Collections;
@@ -8,10 +9,15 @@ namespace FSM
     [RequireComponent(typeof(FSM_CIVILIAN_FOLLOWS_MARINE))]
     [RequireComponent(typeof(Arrive))]
     [RequireComponent(typeof(CIVILIAN_BlackBoard))]
-
     public class FSM_CIVILIAN_MILITAR_BASE : FiniteStateMachine
     {
-        public enum State { INITIAL, FOLLOWING_MARINE, GOING_BASE };
+        public enum State
+        {
+            INITIAL,
+            FOLLOWING_MARINE,
+            GOING_BASE
+        };
+
         public State currentState = State.INITIAL;
 
         private FSM_CIVILIAN_FOLLOWS_MARINE fsmCivilianFollowsMarine;
@@ -51,23 +57,54 @@ namespace FSM
                     ChangeState(State.FOLLOWING_MARINE);
                     break;
                 case State.FOLLOWING_MARINE:
-                    if (SensingUtils.DistanceToTarget(gameObject, blackboard.militarBase) < blackboard.MilitarBaseDetectableRadius)
+                    var foundBird = SensingUtils.FindInstanceWithinRadius(this.gameObject, "Bird",
+                        blackboard.birdDetectionRadius);
+                    try
                     {
-                        ChangeState(State.GOING_BASE);
-                        break;
+                        if (SensingUtils.DistanceToTarget(gameObject, blackboard.militarBase) <
+                            blackboard.MilitarBaseDetectableRadius)
+                        {
+                            if (foundBird.GetComponent<BIRD_FSM_Flocking>().currentState !=
+                                BIRD_FSM_Flocking.State.BLOCKING)
+                            {
+                                ChangeState(State.GOING_BASE);
+                                break;
+                            }
+                        }
                     }
+                    catch (NullReferenceException)
+                    {
+                    }
+
+
                     break;
                 case State.GOING_BASE:
-                    if (SensingUtils.DistanceToTarget(gameObject, blackboard.militarBase) < blackboard.nearbyMilitarBaseRadius)
+                    if (SensingUtils.DistanceToTarget(gameObject, blackboard.militarBase) <
+                        blackboard.nearbyMilitarBaseRadius)
                     {
                         if (blackboard.followingPlayer)
                             GameController.Instance.civilianGlobalBB.CivilianFollowingCounter--;
 
-                        var particle = Instantiate(GameController.Instance.civilianGlobalBB.civilianSaved, transform.position, transform.rotation);
+                        var particle = Instantiate(GameController.Instance.civilianGlobalBB.civilianSaved,
+                            transform.position, transform.rotation);
                         particle.Play();
                         Destroy(gameObject);
                         break;
                     }
+
+                    var bird = SensingUtils.FindInstanceWithinRadius(this.gameObject, "Bird",
+                        blackboard.birdDetectionRadius);
+                    try
+                    {
+                        if (bird.GetComponent<BIRD_FSM_Flocking>().currentState == BIRD_FSM_Flocking.State.BLOCKING)
+                        {
+                            ChangeState(State.FOLLOWING_MARINE);
+                        }
+                    }
+                    catch (NullReferenceException)
+                    {
+                    }
+
                     break;
             }
         }
@@ -97,6 +134,7 @@ namespace FSM
                     arrive.enabled = true;
                     break;
             }
+
             currentState = newState;
         }
     }
