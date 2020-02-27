@@ -12,6 +12,7 @@ TagManager:
   - Civilian
   - MilitarBase
   - TransportingCivilian
+  - Bird
   layers:
   - Default
   - TransparentFX
