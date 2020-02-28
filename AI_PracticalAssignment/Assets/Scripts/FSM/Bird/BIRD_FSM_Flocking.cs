@@ -69,8 +69,6 @@ namespace FSM
                     }
                     currentTimer += Time.deltaTime;
                     break;
-                default:
-                    throw new ArgumentOutOfRangeException();
             }
         }
 
@@ -80,7 +78,7 @@ namespace FSM
             switch (currentState)
             {
                 case State.INITIAL:
-                    
+
                     break;
                 case State.WANDERING:
                     flockingAround.enabled = false;
@@ -89,17 +87,14 @@ namespace FSM
                 case State.BLOCKING:
                     flockingAround.enabled = false;
                     currentTimer = 0f;
-                    
                     break;
-                default:
-                    throw new ArgumentOutOfRangeException();
             }
 
             // enter logic
             switch (newState)
             {
                 case State.INITIAL:
-                    
+
                     break;
                 case State.WANDERING:
                     flockingAround.enabled = true;
@@ -113,8 +108,6 @@ namespace FSM
                     flockingAround.attractor = blackboard.blockingAttractor;
                     flockingAround.seekWeight = blackboard.blockingSeekWeight;
                     break;
-                default:
-                    throw new ArgumentOutOfRangeException(nameof(newState), newState, null);
             }
 
             currentState = newState;

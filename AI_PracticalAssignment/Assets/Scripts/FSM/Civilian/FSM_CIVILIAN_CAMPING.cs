@@ -131,5 +131,11 @@ namespace FSM
         {
             flee.target = target;
         }
+
+        private void OnDestroy()
+        {
+            if (blackboard.followingPlayer)
+                GameController.Instance.civilianGlobalBB.CivilianFollowingCounter--;
+        }
     }
 }

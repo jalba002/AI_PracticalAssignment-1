@@ -78,8 +78,6 @@ namespace FSM
 
                     if (SensingUtils.DistanceToTarget(gameObject, civilian) < blackboard.nearbyCivilianRadius)
                     {
-                        if (civilian.GetComponent<CIVILIAN_BlackBoard>().followingPlayer)
-                            GameController.Instance.civilianGlobalBB.CivilianFollowingCounter--;
                         ChangeState(State.KILL_CIVILIAN);
                         break;
                     }
@@ -105,7 +103,6 @@ namespace FSM
                     pursue.enabled = false;
                     break;
                 case State.KILL_CIVILIAN:
-                    Destroy(civilian);
                     break;
             }
 
@@ -124,6 +121,7 @@ namespace FSM
                 case State.KILL_CIVILIAN:
                     var particle = Instantiate(GameController.Instance.civilianGlobalBB.civilianDead, transform.position, transform.rotation);
                     particle.Play();
+                    Destroy(civilian);
                     break;
             }
 

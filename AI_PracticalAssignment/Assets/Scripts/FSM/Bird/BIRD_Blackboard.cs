@@ -12,6 +12,4 @@ public class BIRD_Blackboard : MonoBehaviour
     public float maxBlockingTime;
     public float blockingWanderRate;
     public float wanderWanderRate;
-    
-
 }

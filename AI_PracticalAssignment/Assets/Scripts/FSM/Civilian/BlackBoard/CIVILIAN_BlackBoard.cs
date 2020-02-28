@@ -20,7 +20,8 @@ public class CIVILIAN_BlackBoard : MonoBehaviour
     public float MilitarBaseDetectableRadius = 20.0f;
     public float nearbyMilitarBaseRadius = .5f;
     public GameObject militarBase;
-    public float birdDetectionRadius = 25f;
+    public float birdDetectionRadius = 10f;
+    public float birdScareRadius = 15f;
 
     void Awake()
     {
