@@ -6,7 +6,7 @@ using System.Collections;
 namespace FSM
 {
     [RequireComponent(typeof(FSM_ZOMBIE_PATROLLING))]
-    [RequireComponent(typeof(Arrive))]
+    [RequireComponent(typeof(RepulsionArrivePlusAvoid))]
     [RequireComponent(typeof(ZOMBIE_BlackBoard))]
 
     public class FSM_ZOMBIE_SPOTTING_FLARE : FiniteStateMachine
@@ -15,7 +15,7 @@ namespace FSM
         public State currentState = State.INITIAL;
 
         private FSM_ZOMBIE_PATROLLING fsmZombiePatrolling;
-        private Arrive arrive;
+        private RepulsionArrivePlusAvoid arrive;
         private KinematicState ks;
 
         private ZOMBIE_BlackBoard blackboard;
@@ -27,7 +27,7 @@ namespace FSM
         void Start()
         {
             fsmZombiePatrolling = GetComponent<FSM_ZOMBIE_PATROLLING>();
-            arrive = GetComponent<Arrive>();
+            arrive = GetComponent<RepulsionArrivePlusAvoid>();
             blackboard = GetComponent<ZOMBIE_BlackBoard>();
             ks = GetComponent<KinematicState>();
 
