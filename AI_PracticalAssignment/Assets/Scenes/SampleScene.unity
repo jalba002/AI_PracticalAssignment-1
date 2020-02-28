@@ -283,13 +283,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3091d03bcde10954c8b14122343556f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationalPolicy: 1
-  closeEnoughRadius: 1
-  slowDownRadius: 0.5
+  rotationalPolicy: 3
+  closeEnoughRadius: 2.3
+  slowDownRadius: 3.5
   timeToDesiredSpeed: 0.1
   target: {fileID: 0}
   idTag: Zombie
   repulsionThreshold: 3
+  repulsionWeight: 0.8
 --- !u!1 &80125387
 GameObject:
   m_ObjectHideFlags: 0
@@ -936,13 +937,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3091d03bcde10954c8b14122343556f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationalPolicy: 1
-  closeEnoughRadius: 1
-  slowDownRadius: 0.5
+  rotationalPolicy: 3
+  closeEnoughRadius: 2.3
+  slowDownRadius: 3.5
   timeToDesiredSpeed: 0.1
   target: {fileID: 0}
   idTag: Zombie
   repulsionThreshold: 3
+  repulsionWeight: 0.8
 --- !u!1001 &282022033
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1164,13 +1166,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3091d03bcde10954c8b14122343556f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationalPolicy: 1
-  closeEnoughRadius: 1
-  slowDownRadius: 0.5
+  rotationalPolicy: 3
+  closeEnoughRadius: 2.3
+  slowDownRadius: 3.5
   timeToDesiredSpeed: 0.1
   target: {fileID: 0}
   idTag: Zombie
   repulsionThreshold: 3
+  repulsionWeight: 0.8
 --- !u!1 &451249893
 GameObject:
   m_ObjectHideFlags: 0
@@ -2558,13 +2561,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3091d03bcde10954c8b14122343556f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationalPolicy: 1
-  closeEnoughRadius: 1
-  slowDownRadius: 0.5
+  rotationalPolicy: 3
+  closeEnoughRadius: 2.3
+  slowDownRadius: 3.5
   timeToDesiredSpeed: 0.1
   target: {fileID: 0}
   idTag: Zombie
   repulsionThreshold: 3
+  repulsionWeight: 0.8
 --- !u!1 &850329375
 GameObject:
   m_ObjectHideFlags: 0
@@ -3222,13 +3226,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3091d03bcde10954c8b14122343556f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationalPolicy: 1
-  closeEnoughRadius: 1
-  slowDownRadius: 0.5
+  rotationalPolicy: 3
+  closeEnoughRadius: 2.3
+  slowDownRadius: 3.5
   timeToDesiredSpeed: 0.1
   target: {fileID: 0}
   idTag: Zombie
   repulsionThreshold: 3
+  repulsionWeight: 0.8
 --- !u!4 &1270980441 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1684886484235058525, guid: 5f1bb54a753145d46ab49d784df1b801,
@@ -3536,13 +3541,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3091d03bcde10954c8b14122343556f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationalPolicy: 1
-  closeEnoughRadius: 1
-  slowDownRadius: 0.5
+  rotationalPolicy: 3
+  closeEnoughRadius: 2.3
+  slowDownRadius: 3.5
   timeToDesiredSpeed: 0.1
   target: {fileID: 0}
   idTag: Zombie
   repulsionThreshold: 3
+  repulsionWeight: 0.8
 --- !u!1001 &1541431750
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3897,7 +3903,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -43.99994, y: 73.2749}
+  m_AnchoredPosition: {x: -44, y: 73.2749}
   m_SizeDelta: {x: -88.05, y: -269.64996}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1648358934
@@ -4780,13 +4786,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3091d03bcde10954c8b14122343556f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationalPolicy: 1
-  closeEnoughRadius: 1
-  slowDownRadius: 0.5
+  rotationalPolicy: 3
+  closeEnoughRadius: 2.3
+  slowDownRadius: 3.5
   timeToDesiredSpeed: 0.1
   target: {fileID: 0}
   idTag: Zombie
   repulsionThreshold: 3
+  repulsionWeight: 0.8
 --- !u!1001 &1940475317
 PrefabInstance:
   m_ObjectHideFlags: 0
