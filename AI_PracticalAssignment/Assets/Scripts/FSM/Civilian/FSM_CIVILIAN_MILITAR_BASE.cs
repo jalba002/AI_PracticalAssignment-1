@@ -110,6 +110,7 @@ namespace FSM
                     arrive.enabled = true;
                     break;
                 case State.CIVILIAN_SAVED:
+                    GameController.Instance.CanvasController.CivilianSavedUpdate();
                     var particle = Instantiate(GameController.Instance.civilianGlobalBB.civilianSaved, transform.position, transform.rotation);
                     particle.Play();
                     Destroy(gameObject);

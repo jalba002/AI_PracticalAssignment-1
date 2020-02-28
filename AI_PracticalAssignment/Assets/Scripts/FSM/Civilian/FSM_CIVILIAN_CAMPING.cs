@@ -134,8 +134,13 @@ namespace FSM
 
         private void OnDestroy()
         {
-            if (blackboard.followingPlayer)
-                GameController.Instance.civilianGlobalBB.CivilianFollowingCounter--;
+            if (GameController.Instance != null)
+            {
+                if (blackboard.followingPlayer)
+                    GameController.Instance.civilianGlobalBB.CivilianFollowingCounter--;
+
+                GameController.Instance.CanvasController.CivilianDeadUpdate();
+            }
         }
     }
 }

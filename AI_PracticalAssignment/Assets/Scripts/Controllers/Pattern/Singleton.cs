@@ -26,8 +26,8 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
         {
             if (m_ShuttingDown)
             {
-                Debug.LogWarning("[Singleton] Instance '" + typeof(T) +
-                    "' already destroyed. Returning null.");
+                //Debug.LogWarning("[Singleton] Instance '" + typeof(T) +
+                //    "' already destroyed. Returning null.");
                 return null;
             }
 
@@ -61,9 +61,8 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
         m_ShuttingDown = true;
     }
 
-
-    //private void OnDestroy()
-    //{
-    //    m_ShuttingDown = true;
-    //}
+    private void OnDestroy()
+    {
+        m_ShuttingDown = true;
+    }
 }

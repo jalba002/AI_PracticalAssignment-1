@@ -24,9 +24,9 @@ public class GameController : Singleton<GameController>
     [System.Serializable]
     public class ZOMBIE_GLOBAL_BlackBoard
     {
+        [Header("Zombie Spotting Flare FSM parameters")]
         public GameObject flare;
-        public float flareAnnounce = 30f;   // the time the announce will last (el tiempo que durará el anuncio)
-
+        public float flareAnnounce = 20f;
         public float elapsedTime = 0;
 
         public void Update()
@@ -50,19 +50,32 @@ public class GameController : Singleton<GameController>
     public GameObject playerController;
 
     [HideInInspector] public float civiliansSaved;
+    [HideInInspector] public bool gamePaused;
+    [HideInInspector] public bool gameOver;
+    public GameObject pauseMenu;
+    public GameObject gameOverMenu;
+    public CanvasController CanvasController;
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-            Quit();
+        if (Input.GetKeyDown(KeyCode.Escape) && !gamePaused)
+            Pause();
+
+        if (Input.GetKeyDown(KeyCode.R) && !gamePaused)
+            GameOver();
     }
 
-    public void Quit()
+    void Pause()
     {
-        Application.Quit();
+        pauseMenu.SetActive(true);
+        gamePaused = true;
+        Time.timeScale = 0;
+    }
 
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#endif
+    public void GameOver()
+    {
+        gameOverMenu.SetActive(true);
+        gamePaused = true;
+        Time.timeScale = 0;
     }
 }

@@ -90,10 +90,7 @@ public class FlareController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.transform.tag == "Wall")
-        {
-            Debug.Log("Wall detected");
             DestroyObject();
-        }
     }
 
     public void DestroyObject()

@@ -8,15 +8,9 @@ namespace FSM
 {
     [RequireComponent(typeof(BIRD_Blackboard))]
     [RequireComponent(typeof(FlockingAround))]
-    public class BIRD_FSM_Flocking : FiniteStateMachine
+    public class BIRD_FSM_FLOCKING : FiniteStateMachine
     {
-        public enum State
-        {
-            INITIAL,
-            WANDERING,
-            BLOCKING
-        };
-
+        public enum State { INITIAL, WANDERING, BLOCKING };
         public State currentState = State.INITIAL;
 
         private FlockingAround flockingAround;

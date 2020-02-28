@@ -10,15 +10,14 @@ public class WeaponController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire2") && flares > 0)
-        {
+        if (Input.GetButtonDown("Fire1") && flares > 0 && !GameController.Instance.gamePaused)
             ThrowFlare();
-        }
     }
 
     void ThrowFlare()
     {
         flares--;
+        GameController.Instance.CanvasController.FlareCounterUpdate(flares);
         GameObject newFlare = Instantiate(flarePrefab, damagePoint.position, damagePoint.rotation);
     }
 }
