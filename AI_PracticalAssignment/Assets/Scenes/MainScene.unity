@@ -713,7 +713,7 @@ PrefabInstance:
     - target: {fileID: 4059053625457886661, guid: f78c97c711b3cba4fa08957d30a78d73,
         type: 3}
       propertyPath: repulsionThreshold
-      value: 1
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 4059053625457886664, guid: f78c97c711b3cba4fa08957d30a78d73,
         type: 3}
@@ -1665,7 +1665,7 @@ PrefabInstance:
     - target: {fileID: 4059053625457886661, guid: f78c97c711b3cba4fa08957d30a78d73,
         type: 3}
       propertyPath: repulsionThreshold
-      value: 1
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 4059053625457886664, guid: f78c97c711b3cba4fa08957d30a78d73,
         type: 3}
@@ -3003,7 +3003,7 @@ PrefabInstance:
     - target: {fileID: 4059053625457886661, guid: f78c97c711b3cba4fa08957d30a78d73,
         type: 3}
       propertyPath: repulsionThreshold
-      value: 1
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 4059053625457886664, guid: f78c97c711b3cba4fa08957d30a78d73,
         type: 3}
@@ -3963,7 +3963,7 @@ PrefabInstance:
     - target: {fileID: 4059053625457886661, guid: f78c97c711b3cba4fa08957d30a78d73,
         type: 3}
       propertyPath: repulsionThreshold
-      value: 1
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 4059053625457886664, guid: f78c97c711b3cba4fa08957d30a78d73,
         type: 3}
@@ -4217,7 +4217,7 @@ PrefabInstance:
     - target: {fileID: 4059053625457886661, guid: f78c97c711b3cba4fa08957d30a78d73,
         type: 3}
       propertyPath: repulsionThreshold
-      value: 1
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 4059053625457886664, guid: f78c97c711b3cba4fa08957d30a78d73,
         type: 3}
@@ -4575,7 +4575,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1701552227}
   m_LocalRotation: {x: -0, y: -0, z: -0.4277939, w: 0.90387636}
-  m_LocalPosition: {x: -5.29, y: 5.01, z: 0}
+  m_LocalPosition: {x: -5.64, y: 4.76, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1374161820}
@@ -5953,6 +5953,36 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: -3
       objectReference: {fileID: 0}
+    - target: {fileID: 4890527671186492557, guid: 883e8f992e69cee40993961d852f21ed,
+        type: 3}
+      propertyPath: m_Points.Array.data[2].x
+      value: 50.60343
+      objectReference: {fileID: 0}
+    - target: {fileID: 4890527671186492557, guid: 883e8f992e69cee40993961d852f21ed,
+        type: 3}
+      propertyPath: m_Points.Array.data[4].x
+      value: -20.46439
+      objectReference: {fileID: 0}
+    - target: {fileID: 4890527671186492557, guid: 883e8f992e69cee40993961d852f21ed,
+        type: 3}
+      propertyPath: m_Points.Array.data[0].x
+      value: -20.46439
+      objectReference: {fileID: 0}
+    - target: {fileID: 4890527671186492557, guid: 883e8f992e69cee40993961d852f21ed,
+        type: 3}
+      propertyPath: m_Points.Array.data[3].y
+      value: -24.6969
+      objectReference: {fileID: 0}
+    - target: {fileID: 4890527671186492557, guid: 883e8f992e69cee40993961d852f21ed,
+        type: 3}
+      propertyPath: m_Points.Array.data[1].y
+      value: 36.30128
+      objectReference: {fileID: 0}
+    - target: {fileID: 4890527671186492557, guid: 883e8f992e69cee40993961d852f21ed,
+        type: 3}
+      propertyPath: m_Points.Array.data[4].y
+      value: 36.30128
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 883e8f992e69cee40993961d852f21ed, type: 3}
 --- !u!1001 &1684886483899197406
@@ -6101,16 +6131,6 @@ PrefabInstance:
       propertyPath: defaultAttractor
       value: 
       objectReference: {fileID: 1559039284}
-    - target: {fileID: 2017030815726549118, guid: c4d7820436e32204590bbe386248e2fb,
-        type: 3}
-      propertyPath: maxBlockingTime
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2017030815726549118, guid: c4d7820436e32204590bbe386248e2fb,
-        type: 3}
-      propertyPath: maxWanderTime
-      value: 35
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4d7820436e32204590bbe386248e2fb, type: 3}
 --- !u!1001 &4059053626149922723
@@ -6123,7 +6143,7 @@ PrefabInstance:
     - target: {fileID: 4059053625457886661, guid: f78c97c711b3cba4fa08957d30a78d73,
         type: 3}
       propertyPath: repulsionThreshold
-      value: 1
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 4059053625457886662, guid: f78c97c711b3cba4fa08957d30a78d73,
         type: 3}
