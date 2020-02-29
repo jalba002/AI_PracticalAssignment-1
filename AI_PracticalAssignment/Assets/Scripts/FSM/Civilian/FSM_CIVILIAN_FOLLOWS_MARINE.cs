@@ -38,7 +38,7 @@ namespace FSM
         }
 
         public override void Exit()
-        {
+        {   
             fsmCivilianCamping.Exit();
             leaderFollowing.enabled = false;
             ks.maxSpeed = normalSpeed;

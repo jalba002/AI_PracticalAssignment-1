@@ -5077,11 +5077,21 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 1010153388813172116, guid: 43237edf5fb6718479c8c39c89deae10,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d127cdcbc2e494243810207e96bc284d, type: 2}
     - target: {fileID: 1010153388962659823, guid: 43237edf5fb6718479c8c39c89deae10,
         type: 3}
       propertyPath: m_SortingOrder
       value: -2
       objectReference: {fileID: 0}
+    - target: {fileID: 1010153388962659823, guid: 43237edf5fb6718479c8c39c89deae10,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d127cdcbc2e494243810207e96bc284d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43237edf5fb6718479c8c39c89deae10, type: 3}
 --- !u!1 &2001875918 stripped
