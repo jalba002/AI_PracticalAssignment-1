@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2017030815726549114}
   - component: {fileID: 2017030815726549115}
+  - component: {fileID: 2017030815726549118}
   - component: {fileID: 2017030815726549112}
   - component: {fileID: 2017030815726549113}
-  - component: {fileID: 2017030815726549118}
   - component: {fileID: 2017030815726549119}
   m_Layer: 0
   m_Name: Bird
@@ -85,6 +85,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2017030815726549118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2017030815726549116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1576c87f34c2ac4d82c845a5f786e42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blockingAttractor: {fileID: 0}
+  defaultAttractor: {fileID: 0}
+  seekWeight: 0.35
+  blockingSeekWeight: 0.7
+  maxWanderTime: 15
+  maxBlockingTime: 15
+  blockingWanderRate: 10
+  wanderWanderRate: 25
 --- !u!114 &2017030815726549112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,26 +148,6 @@ MonoBehaviour:
   wdWeight: 0.23
   attractor: {fileID: 0}
   seekWeight: 0.5
---- !u!114 &2017030815726549118
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2017030815726549116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1576c87f34c2ac4d82c845a5f786e42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  blockingAttractor: {fileID: 0}
-  defaultAttractor: {fileID: 0}
-  seekWeight: 0.35
-  blockingSeekWeight: 0.7
-  maxWanderTime: 15
-  maxBlockingTime: 15
-  blockingWanderRate: 10
-  wanderWanderRate: 25
 --- !u!114 &2017030815726549119
 MonoBehaviour:
   m_ObjectHideFlags: 0

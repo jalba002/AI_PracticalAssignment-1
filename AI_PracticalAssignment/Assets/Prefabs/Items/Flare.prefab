@@ -97,9 +97,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04658584567a416428c93fdbed7765cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 150
+  moveSpeed: 125
   rotationSpeed: 300
-  destroyTime: 10
+  destroyTime: 11
   maxSize: 2
   growingRate: 1.5
 --- !u!50 &2397690438023084012
@@ -259,6 +259,14 @@ PrefabInstance:
     - target: {fileID: 19872722, guid: a11e3dbf2c19e104db8fdcc0a8d399fa, type: 3}
       propertyPath: InitialModule.startRotationY.minMaxState
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19911358, guid: a11e3dbf2c19e104db8fdcc0a8d399fa, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19996600, guid: a11e3dbf2c19e104db8fdcc0a8d399fa, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a11e3dbf2c19e104db8fdcc0a8d399fa, type: 3}

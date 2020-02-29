@@ -21,8 +21,6 @@ public class FlareController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = transform.up * moveSpeed * Time.deltaTime;
-
-        Debug.Log(moveSpeed);
     }
 
 
