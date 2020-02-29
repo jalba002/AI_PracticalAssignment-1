@@ -12,14 +12,14 @@ GameObject:
   - component: {fileID: 1684886484235058524}
   - component: {fileID: 1684886484235058527}
   - component: {fileID: 1684886484235058518}
+  - component: {fileID: 1684886484235058517}
   - component: {fileID: 1684886484235058521}
   - component: {fileID: 1684886484235058520}
-  - component: {fileID: 1684886484235058517}
+  - component: {fileID: 1684886484235058514}
+  - component: {fileID: 1684886484235058523}
   - component: {fileID: 1684886484235058519}
   - component: {fileID: 1684886484235058522}
-  - component: {fileID: 1684886484235058523}
   - component: {fileID: 1684886484235058516}
-  - component: {fileID: 1684886484235058514}
   m_Layer: 10
   m_Name: Civilian
   m_TagString: Civilian
@@ -131,6 +131,31 @@ MonoBehaviour:
   orientation: 0
   linearVelocity: {x: 0, y: 0, z: 0}
   angularSpeed: 0
+--- !u!114 &1684886484235058517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684886484235058526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf38a19963eaeff468610b6de118f0c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nearbyZombieRadius: 5
+  farAwayZombieRadius: 8
+  zombieTag: Zombie
+  campFire: {fileID: 0}
+  PlayerDetectionRadius: 5
+  farAwayPlayerRadius: 10
+  fastVelocity: 1.2
+  followingPlayer: 0
+  MilitarBaseDetectableRadius: 8
+  nearbyMilitarBaseRadius: 0.4
+  militarBase: {fileID: 0}
+  birdDetectionRadius: 20
+  birdScareRadius: 15
 --- !u!114 &1684886484235058521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,31 +198,42 @@ MonoBehaviour:
   avoidDistance: 10
   secondaryWhiskerAngle: 25
   secondaryWhiskerRatio: 0.7
---- !u!114 &1684886484235058517
+--- !u!114 &1684886484235058514
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1684886484235058526}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf38a19963eaeff468610b6de118f0c9, type: 3}
+  m_Script: {fileID: 11500000, guid: 47dcfdf0319fb374ea2b04e8621fa0d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nearbyZombieRadius: 5
-  farAwayZombieRadius: 8
-  zombieTag: Zombie
-  campFire: {fileID: 0}
-  PlayerDetectionRadius: 5
-  farAwayPlayerRadius: 10
-  fastVelocity: 1.2
-  followingPlayer: 0
-  MilitarBaseDetectableRadius: 8
-  nearbyMilitarBaseRadius: 0.4
-  militarBase: {fileID: 0}
-  birdDetectionRadius: 25
-  birdScareRadius: 20
+  rotationalPolicy: 1
+  closeEnoughRadius: 0.1
+  slowDownRadius: 0.1
+  timeToDesiredSpeed: 0.1
+  target: {fileID: 0}
+--- !u!114 &1684886484235058523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684886484235058526}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6cb2744380815845a65e1076a8efe3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationalPolicy: 1
+  target: {fileID: 0}
+  requiredDistance: 1
+  requiredAngle: 180
+  idTag: Civilian
+  repulsionThreshold: 4
+  wlr: 0.5
 --- !u!114 &1684886484235058519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,25 +260,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 0
---- !u!114 &1684886484235058523
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1684886484235058526}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6cb2744380815845a65e1076a8efe3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationalPolicy: 1
-  target: {fileID: 0}
-  requiredDistance: 1
-  requiredAngle: 180
-  idTag: Civilian
-  repulsionThreshold: 4
-  wlr: 0.5
 --- !u!114 &1684886484235058516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,20 +273,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 0
---- !u!114 &1684886484235058514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1684886484235058526}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47dcfdf0319fb374ea2b04e8621fa0d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationalPolicy: 1
-  closeEnoughRadius: 0.1
-  slowDownRadius: 0.1
-  timeToDesiredSpeed: 0.1
-  target: {fileID: 0}
