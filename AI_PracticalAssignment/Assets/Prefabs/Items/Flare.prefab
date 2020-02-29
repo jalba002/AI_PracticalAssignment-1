@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04658584567a416428c93fdbed7765cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 160
+  moveSpeed: 150
   rotationSpeed: 300
   destroyTime: 10
   maxSize: 2
@@ -133,7 +133,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.1983037, y: 0.20514202}

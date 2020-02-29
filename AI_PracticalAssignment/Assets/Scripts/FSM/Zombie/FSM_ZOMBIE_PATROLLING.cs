@@ -5,7 +5,7 @@ using System.Collections;
 
 namespace FSM
 {
-    [RequireComponent(typeof(Pursue))]
+    [RequireComponent(typeof(PursuePlusRepulsive))]
     [RequireComponent(typeof(WanderAroundPlusAvoid))]
     [RequireComponent(typeof(ZOMBIE_BlackBoard))]
 
@@ -16,7 +16,7 @@ namespace FSM
         public State currentState = State.INITIAL;
 
         private WanderAroundPlusAvoid wander;
-        private Pursue pursue;
+        private PursuePlusRepulsive pursue;
         private ZOMBIE_BlackBoard blackboard;
         private KinematicState ks;
 
@@ -28,7 +28,7 @@ namespace FSM
         void Start()
         {
             wander = GetComponent<WanderAroundPlusAvoid>();
-            pursue = GetComponent<Pursue>();
+            pursue = GetComponent<PursuePlusRepulsive>();
             blackboard = GetComponent<ZOMBIE_BlackBoard>();
             ks = GetComponent<KinematicState>();
 

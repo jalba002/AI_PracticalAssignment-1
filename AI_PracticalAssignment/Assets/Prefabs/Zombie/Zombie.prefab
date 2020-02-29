@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 3872462054686434731}
   - component: {fileID: 3872462054686434732}
   - component: {fileID: 3872462054686434390}
-  - component: {fileID: 3872462054686434391}
   - component: {fileID: 3872462054686434728}
+  - component: {fileID: 3872462054686434391}
   - component: {fileID: 3872462054686434729}
   - component: {fileID: 3872462054686434389}
   - component: {fileID: 3872462054686434387}
@@ -129,6 +129,25 @@ MonoBehaviour:
   orientation: 0
   linearVelocity: {x: 0, y: 0, z: 0}
   angularSpeed: 0
+--- !u!114 &3872462054686434728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3872462054686434733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8d46ee6f727841499347a1379436959, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  civilianDetectableRadius: 6
+  nearbyCivilianRadius: 0.5
+  fastVelocity: 1.2
+  civilianTag: Civilian
+  hazardZone: {fileID: 0}
+  flareDetectableRadius: 10
+  nearbyflareRadius: 0.4
 --- !u!114 &3872462054686434391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,25 +171,6 @@ MonoBehaviour:
   avoidDistance: 10
   secondaryWhiskerAngle: 25
   secondaryWhiskerRatio: 0.7
---- !u!114 &3872462054686434728
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3872462054686434733}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8d46ee6f727841499347a1379436959, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  civilianDetectableRadius: 6
-  nearbyCivilianRadius: 0.4
-  fastVelocity: 1.2
-  civilianTag: Civilian
-  hazardZone: {fileID: 0}
-  flareDetectableRadius: 10
-  nearbyflareRadius: 0.4
 --- !u!114 &3872462054686434729
 MonoBehaviour:
   m_ObjectHideFlags: 0

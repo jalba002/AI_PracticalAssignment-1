@@ -139,7 +139,8 @@ namespace FSM
                 if (blackboard.followingPlayer)
                     GameController.Instance.civilianGlobalBB.CivilianFollowingCounter--;
 
-                GameController.Instance.CanvasController.CivilianDeadUpdate();
+                if (GameController.Instance.CanvasController != null)
+                    GameController.Instance.CanvasController.CivilianDeadUpdate();
             }
         }
     }

@@ -5,9 +5,9 @@ using UnityEngine;
 public class FlareController : MonoBehaviour
 {
 
-    public float moveSpeed = 160.0f;
-    public float rotationSpeed = 400.0f;
-    public float destroyTime = 10.0f;
+    public float moveSpeed;
+    public float rotationSpeed;
+    public float destroyTime;
 
     Rigidbody2D rb;
 
@@ -21,13 +21,15 @@ public class FlareController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = transform.up * moveSpeed * Time.deltaTime;
+
+        Debug.Log(moveSpeed);
     }
 
 
     void FixedUpdate()
     {
         if (!targetReached)
-            transform.Rotate(0, 0, rotationSpeed * Time.deltaTime);
+            transform.Rotate(0, 0, rotationSpeed * Time.fixedDeltaTime);
 
         if (!maxSizeReached)
             SizeGrow();
@@ -87,7 +89,7 @@ public class FlareController : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.transform.tag == "Wall")
             DestroyObject();

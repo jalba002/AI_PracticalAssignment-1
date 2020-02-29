@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         currentSpeed = moveSpeed;
+        gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
     }
 
 
