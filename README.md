@@ -16,13 +16,13 @@
 
 ### Additional Objectives
 
-- [ ] One of the characters is not an individual but a block of 30 boids minimum.
-- [ ] One of the FSMs is 2-level HFSM.
+- [x] One of the characters is not an individual but a block of 30 boids minimum.
+- [x] One of the FSMs is 2-level HFSM.
 
 -------------
-- [ ] There's a "new" steering behavoiur (neither shown in class nor in any exercise) that you have implemented yourselves. If that steering is not your own, cite the sources.
-- [ ] If one of the FSMs is a (3+)-level HFSM.
-- [ ] If your scene includes some type of user interaction (it might not be complex but it should allow the user some control on what's happening in the scene).
+- [x] There's a "new" steering behavoiur (neither shown in class nor in any exercise) that you have implemented yourselves. If that steering is not your own, cite the sources.
+- [x] If one of the FSMs is a (3+)-level HFSM.
+- [x] If your scene includes some type of user interaction (it might not be complex but it should allow the user some control on what's happening in the scene).
 
 ### Delivery Rules
 
