@@ -21,11 +21,9 @@ namespace FSM
         void Start()
         {
             flockingAround = GetComponent<FlockingAround>();
-            //flee = GetComponent<FleePlusAvoid>();
             blackboard = GetComponent<BIRD_Blackboard>();
 
             flockingAround.enabled = false;
-            //flee.enabled = false;
             ChangeState(State.INITIAL);
         }
 
@@ -33,7 +31,6 @@ namespace FSM
         {
             base.Exit();
             flockingAround.enabled = false;
-            //flee.enabled = false;
         }
 
         public override void ReEnter()
@@ -53,6 +50,7 @@ namespace FSM
                     if (currentTimer >= blackboard.maxWanderTime)
                     {
                         ChangeState(State.BLOCKING);
+                        break;
                     }
                     currentTimer += Time.deltaTime;
                     break;
@@ -60,6 +58,7 @@ namespace FSM
                     if (currentTimer >= blackboard.maxBlockingTime)
                     {
                         ChangeState(State.WANDERING);
+                        break;
                     }
                     currentTimer += Time.deltaTime;
                     break;
@@ -92,9 +91,9 @@ namespace FSM
                     break;
                 case State.WANDERING:
                     flockingAround.enabled = true;
-                    flockingAround.wanderRate = blackboard.wanderWanderRate;
+                    flockingAround.wanderRate = blackboard.wanderingWanderRate;
                     flockingAround.attractor = blackboard.defaultAttractor;
-                    flockingAround.seekWeight = blackboard.seekWeight;
+                    flockingAround.seekWeight = blackboard.wanderingSeekWeight;
                     break;
                 case State.BLOCKING:
                     flockingAround.enabled = true;

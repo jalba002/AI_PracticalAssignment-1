@@ -58,6 +58,5 @@ public class BirdSpawner : MonoBehaviour
         {
             elapsedTime += Time.deltaTime;
         }
-
     }
 }

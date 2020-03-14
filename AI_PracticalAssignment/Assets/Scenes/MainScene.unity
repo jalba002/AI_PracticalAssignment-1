@@ -720,6 +720,11 @@ PrefabInstance:
       propertyPath: nearbyCivilianRadius
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4059053625457886664, guid: f78c97c711b3cba4fa08957d30a78d73,
+        type: 3}
+      propertyPath: fastVelocity
+      value: 1.35
+      objectReference: {fileID: 0}
     - target: {fileID: 4059053625747333982, guid: f78c97c711b3cba4fa08957d30a78d73,
         type: 3}
       propertyPath: m_RootOrder
@@ -1671,6 +1676,11 @@ PrefabInstance:
         type: 3}
       propertyPath: nearbyCivilianRadius
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4059053625457886664, guid: f78c97c711b3cba4fa08957d30a78d73,
+        type: 3}
+      propertyPath: fastVelocity
+      value: 1.35
       objectReference: {fileID: 0}
     - target: {fileID: 4059053625747333982, guid: f78c97c711b3cba4fa08957d30a78d73,
         type: 3}
@@ -3010,6 +3020,11 @@ PrefabInstance:
       propertyPath: nearbyCivilianRadius
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4059053625457886664, guid: f78c97c711b3cba4fa08957d30a78d73,
+        type: 3}
+      propertyPath: fastVelocity
+      value: 1.35
+      objectReference: {fileID: 0}
     - target: {fileID: 4059053625747333982, guid: f78c97c711b3cba4fa08957d30a78d73,
         type: 3}
       propertyPath: m_RootOrder
@@ -3970,6 +3985,11 @@ PrefabInstance:
       propertyPath: nearbyCivilianRadius
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4059053625457886664, guid: f78c97c711b3cba4fa08957d30a78d73,
+        type: 3}
+      propertyPath: fastVelocity
+      value: 1.35
+      objectReference: {fileID: 0}
     - target: {fileID: 4059053625747333982, guid: f78c97c711b3cba4fa08957d30a78d73,
         type: 3}
       propertyPath: m_RootOrder
@@ -4223,6 +4243,11 @@ PrefabInstance:
         type: 3}
       propertyPath: nearbyCivilianRadius
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4059053625457886664, guid: f78c97c711b3cba4fa08957d30a78d73,
+        type: 3}
+      propertyPath: fastVelocity
+      value: 1.35
       objectReference: {fileID: 0}
     - target: {fileID: 4059053625747333982, guid: f78c97c711b3cba4fa08957d30a78d73,
         type: 3}
@@ -6153,6 +6178,16 @@ PrefabInstance:
       propertyPath: defaultAttractor
       value: 
       objectReference: {fileID: 1559039284}
+    - target: {fileID: 2017030815726549118, guid: c4d7820436e32204590bbe386248e2fb,
+        type: 3}
+      propertyPath: wanderingSeekWeight
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 2017030815726549118, guid: c4d7820436e32204590bbe386248e2fb,
+        type: 3}
+      propertyPath: wanderingWanderRate
+      value: 25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4d7820436e32204590bbe386248e2fb, type: 3}
 --- !u!1001 &4059053626149922723
@@ -6176,6 +6211,11 @@ PrefabInstance:
         type: 3}
       propertyPath: nearbyCivilianRadius
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4059053625457886664, guid: f78c97c711b3cba4fa08957d30a78d73,
+        type: 3}
+      propertyPath: fastVelocity
+      value: 1.35
       objectReference: {fileID: 0}
     - target: {fileID: 4059053625747333982, guid: f78c97c711b3cba4fa08957d30a78d73,
         type: 3}
@@ -6269,12 +6309,12 @@ PrefabInstance:
     - target: {fileID: 7800830938110489511, guid: e0cedf1d6040b1949809ed1540783618,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.8
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7800830938110489511, guid: e0cedf1d6040b1949809ed1540783618,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.4
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 7800830938110489511, guid: e0cedf1d6040b1949809ed1540783618,
         type: 3}

@@ -84,6 +84,7 @@ public class FlareController : MonoBehaviour
         Vector3 l_EulerAngles = transform.rotation.eulerAngles;
         rb.transform.rotation = Quaternion.Euler(0.0f, 0.0f, l_EulerAngles.z);
         Invoke("DestroyObject", destroyTime);
+        GetComponent<Renderer>().sortingOrder = -1;
 
     }
 
